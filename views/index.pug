@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col.text-center
+        h1 Artists Scrape MVP
+    .row
+      .col-8
+        .form-group
+          label(for="youtubeLink") Enter Youtube Artist Link Below:
+          input.form-control#youtubeLink(type="text" placeholder="eg. https://www.youtube.com/channel/UCtVDCwQCRjvN7EFh-wJGbkA" value="https://www.youtube.com/channel/UCtVDCwQCRjvN7EFh-wJGbkA")
+          small.text-muted.text-danger.error-youtube.error-text Please Enter a valid link
+        button.btn.btn-primary.btn-scrapeYoutube(type="submit") Scrape Youtube
+      .col-4
+        label(for="youtuberesult") Results:
+        input.form-control#youtuberesult(type="text" disabled)
